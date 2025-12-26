@@ -2,7 +2,7 @@
 
 #define BQ25601_I2C_TIMEOUT 1
 
-static const char *BQ25601_SystemMinimumVoltage_str[] = {
+const char *BQ25601_SystemMinimumVoltage_str[] = {
     "2.6V", // BQ25601_SYS_MIN_2_6V = 0x0,
     "2.8V", // BQ25601_SYS_MIN_2_8V = 0x1,
     "3.0V", // BQ25601_SYS_MIN_3_0V = 0x2,
@@ -13,106 +13,106 @@ static const char *BQ25601_SystemMinimumVoltage_str[] = {
     "3.7V"  // BQ25601_SYS_MIN_3_7V = 0x7
 };
 
-static const char *BQ25601_MinimumBatteryVoltageForOTG_str[] = {
+const char *BQ25601_MinimumBatteryVoltageForOTG_str[] = {
     "2.8V Fall", // BQ25601_MIN_VBAT_SEL_2_8V_FALL = 0,
     "2.5V Fall", // BQ25601_MIN_VBAT_SEL_2_5V_FALL = 1,
 };
 
-static const char *BQ25601_BoostLimit_str[] = {
+const char *BQ25601_BoostLimit_str[] = {
     "0.5A", // BQ25601_BOOST_LIM_0_5A = 0,
     "1.2A", // BQ25601_BOOST_LIM_1_2A = 1,
 };
 
-static const char *BQ25601_TopOffTimer_str[] = {
+const char *BQ25601_TopOffTimer_str[] = {
     "Disabled", // BQ25601_TOPOFF_TIMER_DISABLED = 0x0,
-    "15min", // BQ25601_TOPOFF_TIMER_15MIN = 0x1,
-    "30min", // BQ25601_TOPOFF_TIMER_30MIN = 0x2,
-    "45min", // BQ25601_TOPOFF_TIMER_45MIN = 0x3,
+    "15min",    // BQ25601_TOPOFF_TIMER_15MIN = 0x1,
+    "30min",    // BQ25601_TOPOFF_TIMER_30MIN = 0x2,
+    "45min",    // BQ25601_TOPOFF_TIMER_45MIN = 0x3,
 };
 
-static const char *BQ25601_RechargeThreshold_str[] = {
+const char *BQ25601_RechargeThreshold_str[] = {
     "100mV", // BQ25601_VRECHG_100MV = 0,
     "200mV", // BQ25601_VRECHG_200MV = 1,
 };
 
-static const char *BQ25601_WatchdogTimer_str[] = {
+const char *BQ25601_WatchdogTimer_str[] = {
     "Disabled", // BQ25601_WATCHDOG_DISABLED = 0x0,
-    "40s", // BQ25601_WATCHDOG_40S = 0x1,
-    "80s", // BQ25601_WATCHDOG_80S = 0x2,
-    "160s", // BQ25601_WATCHDOG_160S = 0x3,
+    "40s",      // BQ25601_WATCHDOG_40S = 0x1,
+    "80s",      // BQ25601_WATCHDOG_80S = 0x2,
+    "160s",     // BQ25601_WATCHDOG_160S = 0x3,
 };
 
-static const char *BQ25601_ChargeTimer_str[] = {
-    "5hrs", // BQ25601_CHG_TIMER_5HRS = 0,
+const char *BQ25601_ChargeTimer_str[] = {
+    "5hrs",  // BQ25601_CHG_TIMER_5HRS = 0,
     "10hrs", // BQ25601_CHG_TIMER_10HRS = 1,
 };
 
-static const char *BQ25601_ThermalRegulationThreshold_str[] = {
-    "90C", // BQ25601_TREG_90C = 0,
+const char *BQ25601_ThermalRegulationThreshold_str[] = {
+    "90C",  // BQ25601_TREG_90C = 0,
     "110C", // BQ25601_TREG_110C = 1,
 };
 
-static const char *BQ25601_JEITA_ISET_str[] = {
+const char *BQ25601_JEITA_ISET_str[] = {
     "50% Ichg", // BQ25601_JEITA_ISET_50PCT_ICHG = 0,
     "20% Ichg", // BQ25601_JEITA_ISET_20PCT_ICHG = 1,
 };
 
-static const char *BQ25601_VAC_OVP_Threshold_str[] = {
-    "5.5V", // BQ25601_OVP_5_5V = 0,
-    "6.5V", // BQ25601_OVP_6_5V = 1,
+const char *BQ25601_VAC_OVP_Threshold_str[] = {
+    "5.5V",  // BQ25601_OVP_5_5V = 0,
+    "6.5V",  // BQ25601_OVP_6_5V = 1,
     "10.5V", // BQ25601_OVP_10_5V = 2,
-    "14V", // BQ25601_OVP_14V = 3,
+    "14V",   // BQ25601_OVP_14V = 3,
 };
 
-static const char *BQ25601_BoostRegulationVoltage_str[] = {
+const char *BQ25601_BoostRegulationVoltage_str[] = {
     "4.85V", // BQ25601_BOOSTV_4_85V = 0,
     "5.00V", // BQ25601_BOOSTV_5_00V = 1,
     "5.15V", // BQ25601_BOOSTV_5_15V = 2,
     "5.30V", // BQ25601_BOOSTV_5_30V = 3,
 };
 
-static const char *BQ25601_JEITA_VSET_str[] = {
+const char *BQ25601_JEITA_VSET_str[] = {
     "4.1V", // BQ25601_JEITA_VSET_4_1V = 0,
     "Vreg", // BQ25601_JEITA_VSET_VREG = 1,
 };
 
-static const char *BQ25601_VindpmTrackBatteryVoltage_str[] = {
-    "Disable", // BQ25601_VDPM_BAT_TRACK_DISABLE = 0x0,
+const char *BQ25601_VindpmTrackBatteryVoltage_str[] = {
+    "Disable",    // BQ25601_VDPM_BAT_TRACK_DISABLE = 0x0,
     "VBAT+200mV", // BQ25601_VDPM_BAT_TRACK_VBAT_PLUS_200MV = 0x1,
     "VBAT+250mV", // BQ25601_VDPM_BAT_TRACK_VBAT_PLUS_250MV = 0x2,
     "VBAT+300mV", // BQ25601_VDPM_BAT_TRACK_VBAT_PLUS_300MV = 0x3,
 };
 
-static const char *BQ25601_VBusStatus_str[] = {
-    "No Input", // BQ25601_VBUS_STAT_NO_INPUT = 0x0,
+const char *BQ25601_VBusStatus_str[] = {
+    "No Input",           // BQ25601_VBUS_STAT_NO_INPUT = 0x0,
     "USB Host SDP 500mA", // BQ25601_VBUS_STAT_USB_HOST_SDP_500MA = 0x1,
-    "Adapter 2.4A", // BQ25601_VBUS_STAT_ADAPTER_2_4A = 0x2,
-    "OTG", // BQ25601_VBUS_STAT_OTG = 0x3,
+    "Adapter 2.4A",       // BQ25601_VBUS_STAT_ADAPTER_2_4A = 0x2,
+    "OTG",                // BQ25601_VBUS_STAT_OTG = 0x3,
 };
 
-static const char *BQ25601_ChargingStatus_str[] = {
-    "Not Charging", // BQ25601_CHRG_STAT_NOT_CHARGING = 0x0,
-    "Pre-Charge", // BQ25601_CHRG_STAT_PRE_CHARGE = 0x1,
-    "Fast Charging", // BQ25601_CHRG_STAT_FAST_CHARGING = 0x2,
+const char *BQ25601_ChargingStatus_str[] = {
+    "Not Charging",       // BQ25601_CHRG_STAT_NOT_CHARGING = 0x0,
+    "Pre-Charge",         // BQ25601_CHRG_STAT_PRE_CHARGE = 0x1,
+    "Fast Charging",      // BQ25601_CHRG_STAT_FAST_CHARGING = 0x2,
     "Charge Termination", // BQ25601_CHRG_STAT_CHARGE_TERMINATION = 0x3,
 };
 
-static const char *BQ25601_ChargeFault_str[] = {
-    "Normal", // BQ25601_CHRG_FAULT_NORMAL = 0x0,
-    "Input Fault", // BQ25601_CHRG_FAULT_INPUT_FAULT = 0x1,
-    "Thermal Shutdown", // BQ25601_CHRG_FAULT_THERMAL_SHUTDOWN = 0x2,
+const char *BQ25601_ChargeFault_str[] = {
+    "Normal",                  // BQ25601_CHRG_FAULT_NORMAL = 0x0,
+    "Input Fault",             // BQ25601_CHRG_FAULT_INPUT_FAULT = 0x1,
+    "Thermal Shutdown",        // BQ25601_CHRG_FAULT_THERMAL_SHUTDOWN = 0x2,
     "Safety Timer Expiration", // BQ25601_CHRG_FAULT_SAFETY_TIMER_EXPIRATION = 0x3,
 };
 
-static const char *BQ25601_NTC_Fault_str[] = {
+const char *BQ25601_NTC_Fault_str[] = {
     "Normal", // BQ25601_NTC_FAULT_NORMAL = 0x0,
-    "-", // 0x1
-    "Warm", // BQ25601_NTC_FAULT_WARM = 0x2,
-    "Cool", // BQ25601_NTC_FAULT_COOL = 0x3,
-    "-", // 0x4
-    "Cold", // BQ25601_NTC_FAULT_COLD = 0x5,
-    "Hot", // BQ25601_NTC_FAULT_HOT = 0x6,
-    "-", // 0x7
+    "-",      // 0x1
+    "Warm",   // BQ25601_NTC_FAULT_WARM = 0x2,
+    "Cool",   // BQ25601_NTC_FAULT_COOL = 0x3,
+    "-",      // 0x4
+    "Cold",   // BQ25601_NTC_FAULT_COLD = 0x5,
+    "Hot",    // BQ25601_NTC_FAULT_HOT = 0x6,
+    "-",      // 0x7
 };
 
 bool BQ25601_Read(struct BQ25601_Platform *platform, struct BQ25601_Data *data, int reg) {
@@ -381,115 +381,87 @@ bool BQ25601_Reset(struct BQ25601_Platform *platform) {
 
 void BQ25601_DebugPrint(struct BQ25601_Platform *platform, struct BQ25601_Data *data, int reg) {
     if (reg == 0 || reg == BQ25601_ALL_REGS) {
-        platform->debugPrint("REG00: EN_HIZ=%d EN_STAT_Pin=%d In_Cur_Limit=%dmA\r\n",
-            data->hizEnable,
-            data->statPinEnable,
-            data->inputCurrentLimit_mA
-        );
+        platform->debugPrint("BQ25601 REG00: EN_HIZ=%d EN_STAT_Pin=%d In_Cur_Limit=%dmA\r\n",
+                             data->hizEnable, data->statPinEnable, data->inputCurrentLimit_mA);
     }
 
     if (reg == 1 || reg == BQ25601_ALL_REGS) {
-        platform->debugPrint("REG01: PFM_DIS=%d WD_RST=%d OTG_CONFIG=%d CHG_CONFIG=%d SYS_MIN=%s MIN_Vbat_SEL=%s\r\n",
-            data->pfmDisable,
-            data->watchdogTimerReset,
-            data->otgEnable,
-            data->chargeEnable,
+        platform->debugPrint(
+            "BQ25601 REG01: PFM_DIS=%d WD_RST=%d OTG_CONFIG=%d CHG_CONFIG=%d SYS_MIN=%s "
+            "MIN_Vbat_SEL=%s\r\n",
+            data->pfmDisable, data->watchdogTimerReset, data->otgEnable, data->chargeEnable,
             BQ25601_SystemMinimumVoltage_str[data->systemMinimumVoltage],
-            BQ25601_MinimumBatteryVoltageForOTG_str[data->minimumBatteryVoltageForOTG]
-        );
+            BQ25601_MinimumBatteryVoltageForOTG_str[data->minimumBatteryVoltageForOTG]);
     }
 
     if (reg == 2 || reg == BQ25601_ALL_REGS) {
-        platform->debugPrint("REG02: BOOST_LIM=%s Q1_FULLON=%d Fast_Chg_Cur=%dmA\r\n",
-            BQ25601_BoostLimit_str[data->boostLimit],
-            data->q1FullOn,
-            data->fastChargeCurrent_mA
-        );
+        platform->debugPrint("BQ25601 REG02: BOOST_LIM=%s Q1_FULLON=%d Fast_Chg_Cur=%dmA\r\n",
+                             BQ25601_BoostLimit_str[data->boostLimit], data->q1FullOn,
+                             data->fastChargeCurrent_mA);
     }
 
     if (reg == 3 || reg == BQ25601_ALL_REGS) {
-         platform->debugPrint("REG03: Prechg_Cur=%dmA Term_Cur=%dmA\r\n",
-            data->prechargeCurrent_mA,
-            data->terminationCurrent_mA
-        );
+        platform->debugPrint("BQ25601 REG03: Prechg_Cur=%dmA Term_Cur=%dmA\r\n",
+                             data->prechargeCurrent_mA, data->terminationCurrent_mA);
     }
 
     if (reg == 4 || reg == BQ25601_ALL_REGS) {
-        platform->debugPrint("REG04: Chr_Volt=%dmV TOPOFF_TIMER=%s Rech_Thr=%s\r\n",
-            data->chargeVoltage_mV,
-            BQ25601_TopOffTimer_str[data->topOffTimer],
-            BQ25601_RechargeThreshold_str[data->rechargeThreshold]
-        );
+        platform->debugPrint("BQ25601 REG04: Chr_Volt=%dmV TOPOFF_TIMER=%s Rech_Thr=%s\r\n",
+                             data->chargeVoltage_mV, BQ25601_TopOffTimer_str[data->topOffTimer],
+                             BQ25601_RechargeThreshold_str[data->rechargeThreshold]);
     }
 
     if (reg == 5 || reg == BQ25601_ALL_REGS) {
-        platform->debugPrint("REG05: EN_TERM=%d WATCHDOG=%s EN_TIMER=%d CHG_TIMER=%s TREG=%s JEITA_ISET=%s\r\n",
-            data->terminationEnable,
-            BQ25601_WatchdogTimer_str[data->watchdogTimer],
-            data->chargeTimerEnable,
-            BQ25601_ChargeTimer_str[data->chargeTimer],
+        platform->debugPrint(
+            "BQ25601 REG05: EN_TERM=%d WATCHDOG=%s EN_TIMER=%d CHG_TIMER=%s TREG=%s "
+            "JEITA_ISET=%s\r\n",
+            data->terminationEnable, BQ25601_WatchdogTimer_str[data->watchdogTimer],
+            data->chargeTimerEnable, BQ25601_ChargeTimer_str[data->chargeTimer],
             BQ25601_ThermalRegulationThreshold_str[data->thermalRegulationThreshold],
-            BQ25601_JEITA_ISET_str[data->jeitaIset]
-        );
+            BQ25601_JEITA_ISET_str[data->jeitaIset]);
     }
 
     if (reg == 6 || reg == BQ25601_ALL_REGS) {
-        platform->debugPrint("REG06: VAC_OVP_Thr=%s Boost_Volt=%s Abs_VINDPM_Thr=%dmV\r\n",
-            BQ25601_VAC_OVP_Threshold_str[data->vacOvpThreshold],
-            BQ25601_BoostRegulationVoltage_str[data->boostRegulationVoltage],
-            data->absoluteVindpmThreshold_mV
-        );
+        platform->debugPrint("BQ25601 REG06: VAC_OVP_Thr=%s Boost_Volt=%s Abs_VINDPM_Thr=%dmV\r\n",
+                             BQ25601_VAC_OVP_Threshold_str[data->vacOvpThreshold],
+                             BQ25601_BoostRegulationVoltage_str[data->boostRegulationVoltage],
+                             data->absoluteVindpmThreshold_mV);
     }
 
     if (reg == 7 || reg == BQ25601_ALL_REGS) {
-        platform->debugPrint("REG07: IINDET_EN=%d TMR2X_EN=%d BATFET_DIS=%d JEITA_VSET=%s BATFET_DLY=%d BATFET_RST_EN=%d VDPM_BAT_TRACK=%s\r\n",
-            data->inputCurrentLimitDetection,
-            data->safetyTimerSlowed2X,
-            data->q4TurnOff,
-            BQ25601_JEITA_VSET_str[data->jeitaVset],
-            data->batfetDelay,
-            data->batfetResetEnable,
-            BQ25601_VindpmTrackBatteryVoltage_str[data->vindpmTrackBatteryVoltage]
-        );
+        platform->debugPrint(
+            "BQ25601 REG07: IINDET_EN=%d TMR2X_EN=%d BATFET_DIS=%d JEITA_VSET=%s BATFET_DLY=%d "
+            "BATFET_RST_EN=%d VDPM_BAT_TRACK=%s\r\n",
+            data->inputCurrentLimitDetection, data->safetyTimerSlowed2X, data->q4TurnOff,
+            BQ25601_JEITA_VSET_str[data->jeitaVset], data->batfetDelay, data->batfetResetEnable,
+            BQ25601_VindpmTrackBatteryVoltage_str[data->vindpmTrackBatteryVoltage]);
     }
 
     if (reg == 8 || reg == BQ25601_ALL_REGS) {
-        platform->debugPrint("REG08: VBUS=%s CHRG=%s PG=%d THERM=%d VSYS=%d\r\n",
-            BQ25601_VBusStatus_str[data->vBusStatus],
-            BQ25601_ChargingStatus_str[data->chargingStatus],
-            data->powerGood,
-            data->thermalRegulationStatus,
-            data->vsysMinRegulationStatus
-        );
+        platform->debugPrint("BQ25601 REG08: VBUS=%s CHRG=%s PG=%d THERM=%d VSYS=%d\r\n",
+                             BQ25601_VBusStatus_str[data->vBusStatus],
+                             BQ25601_ChargingStatus_str[data->chargingStatus], data->powerGood,
+                             data->thermalRegulationStatus, data->vsysMinRegulationStatus);
     }
 
     if (reg == 9 || reg == BQ25601_ALL_REGS) {
-        platform->debugPrint("REG09: WATCHDOG_FAULT=%d BOOST_FAULT=%d CHRG_FAULT=%s BAT_FAULT=%d NTC_FAULT=%s\r\n",
-            data->watchdogFault,
-            data->boostFault,
-            BQ25601_ChargeFault_str[data->chargeFault],
-            data->batteryFault,
-            BQ25601_NTC_Fault_str[data->ntcFault]
-        );
+        platform->debugPrint("BQ25601 REG09: WATCHDOG_FAULT=%d BOOST_FAULT=%d CHRG_FAULT=%s "
+                             "BAT_FAULT=%d NTC_FAULT=%s\r\n",
+                             data->watchdogFault, data->boostFault,
+                             BQ25601_ChargeFault_str[data->chargeFault], data->batteryFault,
+                             BQ25601_NTC_Fault_str[data->ntcFault]);
     }
 
     if (reg == 10 || reg == BQ25601_ALL_REGS) {
-        platform->debugPrint("REG0A: VBUS_GD=%d VINDPM=%d IINDPM=%d TOPOFF_ACTIVE=%d ACOV_STAT=%d VINDPM_INT_MASK=%d IINDPM_INT_MASK=%d\r\n",
-            data->vbusAttached,
-            data->vindpmStatus,
-            data->iindpmStatus,
-            data->topOffActive,
-            data->acovStatus,
-            data->vindpmIntMask,
-            data->iindpmIntMask
-        );
+        platform->debugPrint("BQ25601 REG0A: VBUS_GD=%d VINDPM=%d IINDPM=%d TOPOFF_ACTIVE=%d "
+                             "ACOV_STAT=%d VINDPM_INT_MASK=%d IINDPM_INT_MASK=%d\r\n",
+                             data->vbusAttached, data->vindpmStatus, data->iindpmStatus,
+                             data->topOffActive, data->acovStatus, data->vindpmIntMask,
+                             data->iindpmIntMask);
     }
 
     if (reg == 11 || reg == BQ25601_ALL_REGS) {
-        platform->debugPrint("REG0B: REG_RST=%d PN=%x DEV_REV=%x\r\n",
-            data->reset,
-            data->productNumber,
-            data->deviceRevision
-        );
+        platform->debugPrint("BQ25601 REG0B: REG_RST=%d PN=%x DEV_REV=%x\r\n", data->reset,
+                             data->productNumber, data->deviceRevision);
     }
 }

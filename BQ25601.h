@@ -210,6 +210,24 @@ struct BQ25601_Data {
     uint8_t deviceRevision; // Device Revision
 };
 
+extern const char *BQ25601_SystemMinimumVoltage_str[];
+extern const char *BQ25601_MinimumBatteryVoltageForOTG_str[];
+extern const char *BQ25601_BoostLimit_str[];
+extern const char *BQ25601_TopOffTimer_str[];
+extern const char *BQ25601_RechargeThreshold_str[];
+extern const char *BQ25601_WatchdogTimer_str[];
+extern const char *BQ25601_ChargeTimer_str[];
+extern const char *BQ25601_ThermalRegulationThreshold_str[];
+extern const char *BQ25601_JEITA_ISET_str[];
+extern const char *BQ25601_VAC_OVP_Threshold_str[];
+extern const char *BQ25601_BoostRegulationVoltage_str[];
+extern const char *BQ25601_JEITA_VSET_str[];
+extern const char *BQ25601_VindpmTrackBatteryVoltage_str[];
+extern const char *BQ25601_VBusStatus_str[];
+extern const char *BQ25601_ChargingStatus_str[];
+extern const char *BQ25601_ChargeFault_str[];
+extern const char *BQ25601_NTC_Fault_str[];
+
 bool BQ25601_Read(struct BQ25601_Platform *platform, struct BQ25601_Data *data, int reg);
 bool BQ25601_Write(struct BQ25601_Platform *platform, struct BQ25601_Data *data, int reg);
 
