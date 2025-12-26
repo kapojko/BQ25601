@@ -215,4 +215,6 @@ bool BQ25601_Write(struct BQ25601_Platform *platform, struct BQ25601_Data *data,
 
 bool BQ25601_Reset(struct BQ25601_Platform *platform);
 
+void BQ25601_DebugPrint(struct BQ25601_Platform *platform, struct BQ25601_Data *data, int reg);
+
 #endif // BQ25601_H
