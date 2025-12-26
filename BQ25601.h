@@ -138,7 +138,7 @@ struct BQ25601_Data {
     uint16_t inputCurrentLimit_mA; // Input Current Limit
 
     // REG01, all R/W
-    bool pfmEnable; // Enable PFM
+    bool pfmDisable; // Disable PFM
     bool watchdogTimerReset; // I2C Watchdog Timer Reset, true - reset
     bool otgEnable; // Enable OTG
     bool chargeEnable; // Enable Charge
@@ -212,5 +212,7 @@ struct BQ25601_Data {
 
 bool BQ25601_Read(struct BQ25601_Platform *platform, struct BQ25601_Data *data, int reg);
 bool BQ25601_Write(struct BQ25601_Platform *platform, struct BQ25601_Data *data, int reg);
+
+bool BQ25601_Reset(struct BQ25601_Platform *platform);
 
 #endif // BQ25601_H
